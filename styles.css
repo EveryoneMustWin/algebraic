@@ -1,0 +1,187 @@
+
+
+body {
+    background-color: #222;
+    font: garamond;
+    font-size: 1.1em;
+}
+
+#menu {
+    position: absolute;
+    left: 120px;
+    top: 22px;
+    width: 780px;
+    height: 78px;
+    background-color: #32352a;
+}
+
+#title {
+    position: absolute;
+    left: 224px;
+    top: 12px;
+    width: 500px;
+    height: 50px;
+    color: #5e72b2;
+    font-size: 40px;
+}
+
+#container {
+    position: absolute;
+    left: 120px;
+    top: 114px;
+    width: 780px;
+    height: 580px;
+    background-color: #879caf;
+    padding-top: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#expression-steps {
+    position: absolute;
+    left: 60px;
+    top: 54px;
+    width: 360px;
+    height: 500px;
+    background-color: #47ac5f;
+    padding-top: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.expression-holder {
+/*    position: absolute;
+    left: 20px;
+    top: 14px;*/
+    float: top;
+    width: 318px;
+    height: 116px;
+    background-color: #476c9f;
+    padding-top: 4px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    border: solid 1px #cd2;
+}
+
+#lhs {
+    position: absolute;
+    left: 22px;
+    top: 6px;
+    width: 80px;
+    height: 80px;
+    background-color: #aae;
+    padding: 14px;
+    text-align: center;
+}
+
+#equality {
+    position: absolute;
+    left: 134px;
+    top: 58px;
+    padding: auto auto;
+    width: 14px;
+    height: 14px;
+    padding: 14px;
+}
+
+#rhs {
+    position: absolute;
+    left: 180px;
+    top: 6px;
+    width: 80px;
+    height: 80px;
+    background-color: #aae;
+    padding: 14px;
+    text-align: center;
+}
+
+.term {
+    float: left;
+    height: 22px;
+    padding-top: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+/*    background-color: #88d;*/
+    display: inline-block;
+}
+
+.operator {
+    float: left;
+    height: 22px;
+    padding-top: 32px;
+    padding-left: 6px;
+    padding-right: 6px;
+/*    background-color: #d84;*/
+}
+
+.division {
+    height: 64px;
+/*    background-color: #949;*/
+    padding: 6px;
+    display: inline-block;
+}
+
+.term.above {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 20px;
+    width: 44px;
+    padding-top: 10px;
+/*    background-color: #9ef;*/
+}
+
+.divider {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    height: 2px;
+    width: 42px;
+    background-color: #000;
+}
+
+.term.below {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    height: 20px;
+    width: 44px;
+    padding-top: 10px;
+/*    background-color: #e6f;*/
+}
+
+#expression-options {
+    position: absolute;
+    left: 460px;
+    top: 54px;
+    width: 260px;
+    height: 480px;
+    background-color: #47ac5f;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.expression-option {
+    float: top;
+    width: 200px;
+    height: 20px;
+    background-color: #575c9f;
+    margin-left: 30px;
+    margin-top: 4px;
+    padding-top: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.expression-option.wrong {
+    background-color: #975c5f;
+}
+
+.expression-option.right {
+    background-color: #47cc4f;
+}
+
+

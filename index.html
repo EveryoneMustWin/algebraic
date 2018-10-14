@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Algebraic</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+
+$().ready(function() {
+
+	var problems = [{
+		lhs: {
+			compoundTerm: {
+				"operand1": {
+					compoundTerm: {
+						"operand1": {
+							"simpleTerm": "x"
+						},
+						"operand2": {
+							"simpleTerm": 6
+						},
+						"operator": "subtract"
+					},
+
+
+				},
+				"operand2": {
+					simpleTerm: 4
+				},
+				"operator": "divide"
+			},
+			html: "<div class='division'><div class='term above'>x - 6</div><div class='divider'></div><div class='term below'>4</div></div>"
+		},
+		rhs: {
+			compoundTerm: {
+				"operand1": {
+					simpleTerm: "y"
+				},
+				"operand2": {
+					simpleTerm: 3
+				},
+				"operator": "add"
+			},
+			html: "<div class='term'>y</div><div class='operator'>*</div><div class='term'>3</div>"
+		}
+	}];
+
+//	var i = Math.floor(Math.random() * 3);
+	var i = 0;
+	var problem = problems[i];
+
+	if (problem.lhs.containsDivision) {
+		$("#lhs").html(problem.lhs.html);
+	} else {
+		$("#lhs").html(problem.lhs.html);
+	}
+
+	if (problem.rhs.containsDivision) {
+		$("#rhs").html(problem.rhs.html);
+	} else {
+		$("#rhs").html(problem.rhs.html);
+	}
+
+
+
+	console.log(problem);
+
+	$(".expression-option").click(function() {
+
+		if ($(this).is(".good")) {
+			console.log("good");
+
+			$(this).addClass("right");
+
+			var newEq = problem;
+
+			$("#expression-steps").append("<div class='expression-holder'>" + problem + "</div>");
+
+		} else {
+			$(this).addClass("wrong");
+		}
+	});
+
+//	$("#container").append(newString);
+});
+
+</script>
+
+</head>
+<body>
+	<div id="menu">
+		<div id="title">Algebra practice</div>
+	</div>
+
+	<div id="container">
+		<div id="expression-steps">
+			<div class="expression-holder">
+				<div id="lhs">
+					<div class="term">
+						x
+					</div>
+				</div>
+				<div id="equality">=</div>
+				<div id="rhs">
+					<div class="term">
+						2y
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="expression-options">
+			<div class="expression-option">
+				Divide both sides by 4
+			</div>
+			<div class="expression-option good">
+				Multiply both sides by 4
+			</div>
+			<div class="expression-option">
+				Add 6 to both sides
+			</div>
+			<div class="expression-option">
+				Subtract 6 from both sides
+			</div>
+		</div>
+	</div>
+</body>
+</html>
